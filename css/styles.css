@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', 'Sans Serif';
+}
+
+.header {
+  background-color: #283593;
+  color: #fff;
+  display: flex; /*Defined on a parent element to align all child elements on a single line, side by side.*/
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 45px; /*vertical and horizontal values*/
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none; /*no underscore on anchor*/
+  display: block;
+  transition: all 0.3s ease-out;
+}
+
+.nav a:hover {
+  color: #c5cae9;
+  transform: rotate(6deg); /*Parent must be defined as block element*/
+}
+
+.nav {
+  list-style: none; /*no bullet icon*/
+  margin: 0;
+  padding: 0;
+  display: flex; /*Defined on a parent element to align all child elements on a single line, side by side.*/
+}
+
+.nav li {
+  margin-left: 20px;
+}
+
+.hero {
+  background-color: #c5cae9;
+  padding: 60px 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-weight: normal;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.18rem;
+  line-height: 1.6; /*vertical spacing between lines*/
+}
+
+.button {
+  background-color: #3949ab;
+  color: #fff;
+  text-decoration: none; /*no underscore*/
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.18rem;
+  display: inline-block; /*For an element to respond to the vertical margin of its neighbors but you don't want it to take up the full available width.  Hybrid between inline and block. Link elements <a> are in-line elements.*/
+}
+
+.features {
+  background-color: #e8eaf6;
+  padding: 60px 45px;
+}
+
+.features-inner {
+  max-width: 1200px;
+  margin: 0 auto; /**/
+  display: grid;
+  /*The grid-template-columns property specifies the number (and the widths) of columns in a grid layout.
+    The values are a space separated list, where each value specifies the size of the respective column.
+
+    CSS Syntax
+    grid-template-columns: none|auto|max-content|min-content|length|initial|inherit;
+
+    VALUE	        DESCRIPTION
+    none	        Default value. Columns are created if needed	
+    auto	        The size of the columns is determined by the size of the container and on the size of the content of the items in the column	
+    max-content	  Sets the size of each column to depend on the largest item in the column	
+    min-content	  Sets the size of each column to depend on the smallest item in the column	
+    length	      Sets the size of the columns, by using a legal length value. Read about length units	
+    initial	      Sets this property to its default value. Read about initial	
+    inherit	      Inherits this property from its parent element. Read about inherit
+  */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /*
+  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 1fr 1fr 1fr;
+  */
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.featured-item h3 {
+  color: #283593;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.featured-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #999;
+  font-size: 0.9rem;
+}
